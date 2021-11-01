@@ -8,7 +8,7 @@ listen_socket.bind((HOST, PORT))
 listen_socket.listen(1)
 print(f'Serving HTTP on port {PORT} ...')
 while True:
-    client_connection, client_adress = listen_socket.accept()
+    client_connection, client_address = listen_socket.accept()
     request_data = client_connection.recv(1024)
     print(request_data.decode('UTF-8'))
 
